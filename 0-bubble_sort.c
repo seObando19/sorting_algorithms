@@ -5,7 +5,6 @@
  * in ascending order using the Bubble sort algorithm
  * @array: array of elements to order
  * @size: size of array
- * Return: void
  */
 void bubble_sort(int *array, size_t size)
 {
