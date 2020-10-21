@@ -9,26 +9,28 @@ void selection_sort(int *array, size_t size)
 */
 void selection_sort(int *array, size_t size)
 {
-	unsigned int i = 0, j = i + 1;
-	int tmp;
+	unsigned int i, j, tmp, minim;
 
 	if (size < 2)
 		return;
 
-	while (i < size)
+	for (i = 0; i < size; i++)
 	{
-		while (j < size)
+		minim = i;
+
+		for (j = i + 1; j < size; i++)
 		{
-			if (array[i] > array[j])
+			if (array[minim] > array[j])
 			{
-				tmp = array[i];
-				array[i] = array[j];
-				array[j] = tmp;
+				minim = j;
 			}
-			j++;
-			print_array(array, size);
 		}
-		i++;
-		j = i + 1;
+		if (minim != i)
+		{
+				tmp = array[i];
+				array[i] = array[minim];
+				array[minim] = tmp;
+				print_array(array, size);
+		}
 	}
 }
