@@ -25,10 +25,10 @@ void selection_sort(int *array, size_t size)
 		}
 		if (minim != i)
 		{
-				tmp = array[i];
-				array[i] = array[minim];
-				array[minim] = tmp;
-				print_array(array, size);
+			tmp = array[i];
+			array[i] = array[minim];
+			array[minim] = tmp;
+			print_array(array, size);
 		}
 	}
 }
